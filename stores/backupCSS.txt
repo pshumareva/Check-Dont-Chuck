@@ -1,0 +1,148 @@
+body{
+    margin:0;
+    background-color: rgb(254, 244, 123, 1);
+    font-size:14px;
+}
+
+.container{
+    display:flex; 
+    height:7.143rem;
+    width:60%;
+    margin:0 auto;
+    justify-content: space-between; 
+}
+.logo{    
+    height:7.143rem;
+    width:8.571rem; 
+}
+.navbar{
+    width:300px;
+    height:25px;
+    margin-bottom:0;
+    padding:0;  
+}
+.navbar ul{
+    list-style: none;
+    margin-top:5.45rem;
+    margin-left:1.8rem;
+    padding:0;  
+}
+.navbar ul li{
+    display:inline-block;
+    text-decoration: none;  
+}
+.navbar a{
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size:1.285rem;
+    color:rgb(0, 0, 0);   
+}
+.navbar a:hover{
+    background-color:#b5b3b3;
+    box-shadow: 0 0 0 rgb(0 0 0 / 30%);
+    transition: all 200ms ease-out;
+    
+/* rgb(224, 221, 221) light gray */
+}
+.imgLogo{
+    height:7.143rem;
+}
+.ruler{
+    background-color:#b5b3b3;
+    height:15px;
+    box-shadow: 0 7px 6px -6px #222  
+}
+
+
+/* MAIN CONTENT */
+
+.main-content{
+    display:inline-flexbox;
+    margin:0 auto;
+    padding-top:10px;
+    padding-bottom:10px;
+    width: 60%;
+    background-color: white;
+    height:fit-content;
+    
+    box-shadow: 0 0 15px 5px #696767;
+}
+.services{
+    display:flex;
+    margin:15px auto;
+    height:286px;
+    width:75%;  
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); 
+}
+
+.steps{
+    display: flex;
+    
+    flex:1;
+    margin:15px;
+    
+    padding: 0.357rem;
+}
+
+.store-locator{
+    display:flex;
+    border: 1px solid black;
+    height:285px;
+    margin:15px auto;
+    width:75%;
+}
+.steps{
+    display:block;
+}
+.thumbnail{
+    height:50%;
+    
+    
+    margin-bottom:5;
+}
+.step-title{
+    margin:0;
+    font-family: 'Bebas Neue', cursive;
+    text-align:center;
+}
+
+.basket{
+    display:block;
+    height:100%;
+    width:100%;
+    background-image: url(../lilly/images/basket.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+.payment{
+    display:block;
+    height:100%;
+    width:100%;
+    background-image: url(../lilly/images/cr.card.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+.collect{
+    display:block;
+    height:100%;
+    width:100%;
+    background-image: url(../lilly/images/store.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+@media only screen and (max-width:1100px){
+    
+}
+
+
