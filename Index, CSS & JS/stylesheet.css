@@ -596,8 +596,54 @@ h4 {
   font-weight: normal;
   font-size: 1rem;
   border-bottom:1px solid black;
-  
 }
+
+
+/*CSS FROM ADD-TO-CART VID*/
+
+.items-container{
+  max-width:650px;
+  justify-content: space-around;
+  margin:0 auto;
+  margin-top:50px;
+}
+
+.item-header{
+  width:100%;
+  max-width:650px;
+  display:flex;
+  justify-content: flex-start;
+  border-bottom:4px solid lightgray;
+  margin: 0 auto;
+}
+.item-title1{
+  width:45%;
+}
+.price1{
+  width:15%;
+  display:flex;
+  align-items:center;
+}
+.quantity1{
+  width:30%;
+  display:flex;
+  align-items:center;
+}
+.total1{
+  width:15%;
+  display:flex;
+  align-items:center;
+}
+
+.items{
+  width:45%;
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
+  padding:10px 0;
+  border-bottom:1px solid lightgray;
+}
+
 
 @media only screen and (max-width: 900px) {
   .main-content {

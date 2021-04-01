@@ -101,8 +101,24 @@ function totalCost(items){
     }else {
         localStorage.setItem("totalCost", items.price); 
     }
-
 }
+function displayCart() {
+    let cartItems = localStorage.getItem('itemsInCart');
+    cartItems = JSON.parse(cartItems);
+    let itemContainer = document.querySelector(".items-container");
+    if(cartItems && itemContainer){
+        itemContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            itemContainer.innerHTML += `
+            <div class="item">
+                <img src="../images/${item.tag}.jpg">
+                <span> ${item.title}</span>
+                </div>
+            `
+        });
+    }
+}
+displayCart();
 
 
 //const itemsList = document.querySelectorAll('.shopping-cart')
