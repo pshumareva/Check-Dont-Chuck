@@ -7,7 +7,7 @@ let items = [
         type: "fast-food",
         description: "Menu usually includes: burgers, sandwiches, french fries, desserts, milkshakes.",
         quantity: 1,
-        price: 3,
+        price: 2.50,
         inCart: 0
     },
     {
@@ -17,7 +17,7 @@ let items = [
         type: "fast-food",
         description: "Menu usually includes: A large variety of sandwiches, salads and desserts.",
         quantity: 2,
-        price: 3,
+        price: 2.50,
         inCart: 0
     },
     {
@@ -140,7 +140,6 @@ function displayCart() {
         itemContainer.innerHTML += `
         <div class="basketTotalContainer>
         <h4 class="basketTotalTitle">
-        Total:
         </h4>
         <h4 class="basketTotal">
             <b>Total:</b> ${cartCost}lv
