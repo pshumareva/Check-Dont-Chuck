@@ -7,7 +7,7 @@ let items = [
         type: "fast-food",
         description: "Menu usually includes: burgers, sandwiches, french fries, desserts, milkshakes.",
         quantity: 1,
-        price: 2.99,
+        price: 3,
         inCart: 0
     },
     {
@@ -17,7 +17,7 @@ let items = [
         type: "fast-food",
         description: "Menu usually includes: A large variety of sandwiches, salads and desserts.",
         quantity: 2,
-        price: 2.99,
+        price: 3,
         inCart: 0
     },
     {
@@ -27,7 +27,7 @@ let items = [
         type: 'pizzeria',
         description: "Menu usually includes: Pizza, salads, chicken wings, risotto, traditional main dishes, desserts.",
         quantity: 4,
-        price: 7.99,
+        price: 8,
         inCart: 0
     },
     {
@@ -37,7 +37,7 @@ let items = [
         type: 'vegetarian-restaurant',
         description: "Menu usually includes: Varieties of soups, traditional meals, salads, pastries and desserts.",
         quantity: 3,
-        price: 4.99,
+        price: 5,
         inCart: 0
     }
 ]
@@ -105,17 +105,53 @@ function totalCost(items){
 function displayCart() {
     let cartItems = localStorage.getItem('itemsInCart');
     cartItems = JSON.parse(cartItems);
-    let itemContainer = document.querySelector(".items-container");
+    let itemContainer = document.querySelector(".items");
+    let cartCost = localStorage.getItem('totalCost')
+    
+
     if(cartItems && itemContainer){
         itemContainer.innerHTML = '';
+        
         Object.values(cartItems).map(item => {
             itemContainer.innerHTML += `
             <div class="item">
-                <img src="../images/${item.tag}.jpg">
-                <span> ${item.title}</span>
+                
+                <div class="logoAndName">
+                    <img src="../images/${item.tag}.jpg" class="itemLogo">
+                    <span><b> ${item.title}</b></span>
+                    
                 </div>
+                <div class="itemPrice">${item.price}lv</div>
+                <div class="itemsInCart">
+                    <ion-icon name="remove-circle-outline"></ion-icon>
+                    ${item.inCart}
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </div>
+                <div class="itemTotal1">
+                    ${item.inCart * item.price}lv
+                </div>
+                <div class="trashIcon">
+                    <ion-icon name="trash-outline"></ion-icon>
+                </div>
+            </div> 
             `
         });
+
+        itemContainer.innerHTML += `
+        <div class="basketTotalContainer>
+        <h4 class="basketTotalTitle">
+        Total:
+        </h4>
+        <h4 class="basketTotal">
+            <b>Total:</b> ${cartCost}lv
+        </h4>
+        `
+    } else {
+        itemContainer.innerHTML = '';
+        itemContainer.innerHTML += `
+            <h1> Your basket is empty! </h1>
+        `
+
     }
 }
 displayCart();

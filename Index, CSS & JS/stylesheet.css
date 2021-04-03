@@ -540,46 +540,7 @@ h4 {
   padding: 10px;
   margin:0 auto;
 }
-.itemInCart {
-  display: flex;
-  padding: 10px;
-}
-.itemPic {
-  flex: 1;
-  height: 150px;
-  width:fit-content;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.itemPic.mcdonalds{
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4b/McDonald%27s_logo.svg);
-}
-.itemPic.subway{
-  background-image: url(https://www.v3capgroup.com/wp-content/uploads/2017/11/Subway.png);
-}
-.itemDesc {
-  flex: 3;
-}
-.itemDesc .title{
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  margin-top: 10%;
-  padding-left: 10%;
-}
-.itemDesc .itemDescription {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: normal;
-  font-size: 0.8rem;
-  padding:0 10%;
-}
-.itemQuantity, .price {
-  flex: 0.5;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
-  margin-top: 50px;
-  padding:0 10px;
-}
+
 .remove-button{
   flex:0.5;
   margin-top:50px;
@@ -608,6 +569,14 @@ h4 {
   margin-top:50px;
 }
 
+.items-container .trashIcon ion-icon {
+  font-size:1.2rem;
+}
+
+.items-container .itemLogo{
+  width:100px;
+}
+
 .item-header{
   width:100%;
   max-width:650px;
@@ -616,15 +585,15 @@ h4 {
   border-bottom:4px solid lightgray;
   margin: 0 auto;
 }
-.item-title1{
+.item-title{
   width:45%;
 }
-.price1{
+.price{
   width:15%;
   display:flex;
   align-items:center;
 }
-.quantity1{
+.quantity{
   width:30%;
   display:flex;
   align-items:center;
@@ -635,13 +604,49 @@ h4 {
   align-items:center;
 }
 
-.items{
-  width:45%;
+.item{
   display:flex;
-  justify-content: space-around;
   align-items:center;
   padding:10px 0;
   border-bottom:1px solid lightgray;
+}
+.trashIcon{
+  width:5%;
+  color:#222;
+  margin-left:10px;
+  cursor: pointer;
+}
+.logoAndName{
+  width:45%;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1rem;
+}
+.logoAndName span{
+  margin-left:20px;
+}
+.itemPrice, .itemsInCart{
+  width:15%;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1rem;
+  padding:0 10px;
+}
+.itemsInCart ion-icon{
+  font-size: 1.2rem;
+  padding:0 5px;
+  cursor:pointer;
+}
+.itemsInCart{
+  width:20%;
+}
+.itemTotal1{
+  width:15%;
+  padding-left: 40px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1rem;
+}
+h1{
+  font-family: "Montserrat Alternates", sans-serif;
+  text-align: center;
 }
 
 
